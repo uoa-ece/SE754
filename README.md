@@ -1,2 +1,2 @@
-# SE754
-# This a a test file
+# SOFTENG754
+# This is for the SOFTENG754 course
