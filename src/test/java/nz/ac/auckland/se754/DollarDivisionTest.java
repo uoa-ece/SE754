@@ -17,5 +17,14 @@ public class DollarDivisionTest {
 		// Then
 		assertEquals(5, ten.amount);
 	}
+	
+	@Test
+	public void testDollarDividedByZero() {
+		// Given
+		Dollar ten = new Dollar(10);
+		
+		// When
+		ten.dividedBy(0);
+	}
 
 }
