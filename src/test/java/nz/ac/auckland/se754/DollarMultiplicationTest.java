@@ -13,10 +13,11 @@ public class DollarMultiplicationTest {
 		Dollar five = new Dollar(5);
 		
 		// When
-		five.multiplyBy(2);
+		five.multipliedBy(2);
 		
 		// Then
 		assertEquals(10, five.amount);
+		
 	}
 
 }
