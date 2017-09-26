@@ -11,4 +11,8 @@ public class Dollar {
 	public void multipliedBy(int multiplier) {
 		amount *= multiplier;
 	}
+	
+	public void dividedBy(int denominator) {
+		amount /= denominator;
+	}
 }
