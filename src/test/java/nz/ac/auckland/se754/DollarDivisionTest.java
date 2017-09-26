@@ -26,5 +26,12 @@ public class DollarDivisionTest {
 		// When
 		ten.dividedBy(0);
 	}
+	
+	@Test(timeout=5000)
+	public void testDivisionTimeout() {
+		while(true) {
+			
+		}
+	}
 
 }
