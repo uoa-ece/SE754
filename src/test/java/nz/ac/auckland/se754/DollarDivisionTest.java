@@ -2,6 +2,7 @@ package nz.ac.auckland.se754;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DollarDivisionTest {
@@ -27,6 +28,7 @@ public class DollarDivisionTest {
 		ten.dividedBy(0);
 	}
 	
+	@Ignore
 	@Test(timeout=5000)
 	public void testDivisionTimeout() {
 		while(true) {
