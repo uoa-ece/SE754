@@ -18,5 +18,10 @@ public class TicTacToeSpec {
 	public void shouldThrowRuntimeExceptionWhenXPlacedOutsideBoard() {
 		ticTacToe.play(5, 2);
 	}
+	
+	@Test(expected = RuntimeException.class)
+	public void shouldThrowRuntimeExceptionWhenYPlacedOutsideBoard() {
+		ticTacToe.play(2, 5);
+	}
 
 }
