@@ -89,7 +89,7 @@ public class TicTacToeSpec {
 	}
 	
 	@Test
-	public void shouldShowWinnerWhenHisPiecesOccupiedAWholeDiagonalLine() {
+	public void shouldShowWinnerWhenHisPiecesOccupiedAWholeDiagonalOrAntidiagonalLine() {
 		ticTacToe.play(1, 1); // X
 		ticTacToe.play(1, 2); // O
 		ticTacToe.play(2, 2); // X
