@@ -38,12 +38,8 @@ public class TicTacToe {
 	
 	private boolean isWinner() {
 		for(int i=0; i<3; i++) {
-			if(board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) {
-				return true;
-			}
-		}
-		for(int i=0; i<3; i++) {
-			if(board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) {
+			if(board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer
+					|| board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) {
 				return true;
 			}
 		}
