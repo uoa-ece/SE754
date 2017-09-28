@@ -4,13 +4,23 @@ public class TicTacToe {
 
 	private final int SIZE = 3;
 	private final int LOW_BOUNDARY = 1;
+	public final char SYMBOL_X = 'X';
+	public final char SYMBOL_O = 'O';
+	private final char SYMBOL_EMPTY = '\0';
 	
-	private char[][] board = {
-			{'\0', '\0', '\0'}, 
-			{'\0', '\0', '\0'}, 
-			{'\0', '\0', '\0'}};
+	private char[][] board;
 	
-	private char currentPlayer = '\0';
+	private char currentPlayer;
+	
+	public TicTacToe() {
+		board = new char[SIZE][SIZE];
+		for(int i=0; i<SIZE; i++) {
+			for(int j=0; j<SIZE; j++) {
+				board[i][j] = SYMBOL_EMPTY;
+			}
+		}
+		currentPlayer = SYMBOL_EMPTY;
+	}
 	
 	public String play(int xPosition, int yPosition) {
 		currentPlayer = nextPlayer();
@@ -33,10 +43,10 @@ public class TicTacToe {
 	}
 	
 	private void setBox(int xPosition, int yPosition) {
-		if(board[xPosition-1][yPosition-1] != '\0') {
+		if(board[xPosition-1][yPosition-1] != SYMBOL_EMPTY) {
 			throw new RuntimeException("Space is occupied!");
 		}
-		board[xPosition-1][yPosition-1] = 'X';
+		board[xPosition-1][yPosition-1] = SYMBOL_X;
 	}
 	
 	private boolean isWinner() {
@@ -53,9 +63,9 @@ public class TicTacToe {
 	}
 	
 	public char nextPlayer() {
-		if(currentPlayer == 'X') {
-			return 'O';
+		if(currentPlayer == SYMBOL_X) {
+			return SYMBOL_O;
 		}
-		return 'X';
+		return SYMBOL_X;
 	}
 }

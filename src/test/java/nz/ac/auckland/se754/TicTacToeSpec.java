@@ -45,13 +45,13 @@ public class TicTacToeSpec {
 	
 	@Test
 	public void shouldGiveNextPlayerToXWhenFirstTurn() {
-		assertEquals('X', ticTacToe.nextPlayer());
+		assertEquals(ticTacToe.SYMBOL_X, ticTacToe.nextPlayer());
 	}
 	
 	@Test
 	public void shouldGiveNextPlayerToOWhenLastTurnWasX() {
 		ticTacToe.play(1, 1); // X
-		assertEquals('O', ticTacToe.nextPlayer());
+		assertEquals(ticTacToe.SYMBOL_O, ticTacToe.nextPlayer());
 	}
 
 	@Ignore
@@ -75,7 +75,7 @@ public class TicTacToeSpec {
 		ticTacToe.play(1, 2); // X
 		ticTacToe.play(2, 2); // O
 		String result = ticTacToe.play(1, 3); // X
-		assertEquals(result, "X is the winner");
+		assertEquals("X is the winner", result);
 	}
 	
 	@Test
@@ -85,7 +85,7 @@ public class TicTacToeSpec {
 		ticTacToe.play(2, 1); // X
 		ticTacToe.play(2, 2); // O
 		String result = ticTacToe.play(3, 1); // X
-		assertEquals(result, "X is the winner");
+		assertEquals("X is the winner", result);
 	}
 	
 	@Test
@@ -95,6 +95,8 @@ public class TicTacToeSpec {
 		ticTacToe.play(2, 2); // X
 		ticTacToe.play(2, 3); // O
 		String result = ticTacToe.play(3, 3); // X
-		assertEquals(result, "X is the winner");
+		assertEquals("X is the winner", result);
 	}
+	
+
 }
