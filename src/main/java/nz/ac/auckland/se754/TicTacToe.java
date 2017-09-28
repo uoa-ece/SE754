@@ -11,9 +11,17 @@ public class TicTacToe {
 	
 	public String play(int xPosition, int yPosition) {
 		currentPlayer = nextPlayer();
+		
 		checkPosition(xPosition, 'X');
 		checkPosition(yPosition, 'Y');
 		setBox(xPosition, yPosition);
+		
+		for(int i=0; i<3; i++) {
+			if(board[i][0] == 'X' && board[i][1] == 'X' && board[i][2] == 'X') {
+				return "X is the winner";
+			}
+		}
+		
 		return "No winner";
 	}
 	
