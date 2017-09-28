@@ -22,6 +22,12 @@ public class TicTacToe {
 			}
 		}
 		
+		for(int i=0; i<3; i++) {
+			if(board[0][i] == 'X' && board[1][i] == 'X' && board[2][i] == 'X') {
+				return "X is the winner";
+			}
+		}
+		
 		return "No winner";
 	}
 	
