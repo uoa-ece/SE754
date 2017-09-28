@@ -9,11 +9,12 @@ public class TicTacToe {
 	
 	private char currentPlayer = '\0';
 	
-	public void play(int xPosition, int yPosition) {
+	public String play(int xPosition, int yPosition) {
 		currentPlayer = nextPlayer();
 		checkPosition(xPosition, 'X');
 		checkPosition(yPosition, 'Y');
 		setBox(xPosition, yPosition);
+		return "No winner";
 	}
 	
 	private void checkPosition(int position, char axis) {
