@@ -16,13 +16,15 @@ public class TicTacToeSpec {
 		ticTacToe = new TicTacToe();
 	}
 	
-	@Test(expected = RuntimeException.class)
-	public void shouldThrowRuntimeExceptionWhenXPlacedOutsideBoard() {
-		ticTacToe.play(5, 2);
-	}
-	
 	@Rule
 	public ExpectedException expected = ExpectedException.none();
+	
+	@Test
+	public void shouldThrowRuntimeExceptionWhenXPlacedOutsideBoard() {
+		expected.expect(RuntimeException.class);
+		expected.expectMessage("X position is outside board!");
+		ticTacToe.play(5, 2);
+	}
 	
 	@Test
 	public void sholdThrowRuntimeExceptionWhenYPlacedOutsideBoard() {
