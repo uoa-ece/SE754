@@ -46,7 +46,7 @@ public class TicTacToe {
 		if(board[xPosition-1][yPosition-1] != SYMBOL_EMPTY) {
 			throw new RuntimeException("Space is occupied!");
 		}
-		board[xPosition-1][yPosition-1] = SYMBOL_X;
+		board[xPosition-1][yPosition-1] = currentPlayer;
 	}
 	
 	private boolean isWinner() {
