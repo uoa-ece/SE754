@@ -42,6 +42,11 @@ public class TicTacToe {
 				return true;
 			}
 		}
+		for(int i=0; i<3; i++) {
+			if(board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) {
+				return true;
+			}
+		}
 		return false;
 	}
 	
