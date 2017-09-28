@@ -16,8 +16,8 @@ public class TicTacToe {
 		checkPosition(yPosition, 'Y');
 		setBox(xPosition, yPosition);
 		
-		if(isXWinner()) {
-			return "X is the winner";
+		if(isWinner()) {
+			return currentPlayer+" is the winner";
 		}
 		
 		return "No winner";
@@ -36,9 +36,9 @@ public class TicTacToe {
 		board[xPosition-1][yPosition-1] = 'X';
 	}
 	
-	private boolean isXWinner() {
+	private boolean isWinner() {
 		for(int i=0; i<3; i++) {
-			if(board[i][0] == 'X' && board[i][1] == 'X' && board[i][2] == 'X') {
+			if(board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) {
 				return true;
 			}
 		}
