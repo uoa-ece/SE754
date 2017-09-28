@@ -98,5 +98,17 @@ public class TicTacToeSpec {
 		assertEquals("X is the winner", result);
 	}
 	
-
+	@Test
+	public void shouldShowDrawWhenAllBoxesFilled() {
+		ticTacToe.play(1, 1); // X
+		ticTacToe.play(1, 2); // O
+		ticTacToe.play(1, 3); // X
+		ticTacToe.play(2, 1); // O
+		ticTacToe.play(2, 3); // X
+		ticTacToe.play(2, 2); // O
+		ticTacToe.play(3, 1); // X
+		ticTacToe.play(3, 3); // O
+		String result = ticTacToe.play(3, 2); // X
+		assertEquals("The result is draw", result);
+	}
 }
