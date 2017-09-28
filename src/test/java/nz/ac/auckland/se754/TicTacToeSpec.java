@@ -87,4 +87,14 @@ public class TicTacToeSpec {
 		String result = ticTacToe.play(3, 1); // X
 		assertEquals(result, "X is the winner");
 	}
+	
+	@Test
+	public void shouldShowWinnerWhenHisPiecesOccupiedAWholeDiagonalLine() {
+		ticTacToe.play(1, 1); // X
+		ticTacToe.play(1, 2); // O
+		ticTacToe.play(2, 2); // X
+		ticTacToe.play(2, 3); // O
+		String result = ticTacToe.play(3, 3); // X
+		assertEquals(result, "X is the winner");
+	}
 }
