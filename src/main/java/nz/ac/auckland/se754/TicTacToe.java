@@ -7,7 +7,10 @@ public class TicTacToe {
 			{'\0', '\0', '\0'}, 
 			{'\0', '\0', '\0'}};
 	
+	private char currentPlayer = '\0';
+	
 	public void play(int xPosition, int yPosition) {
+		currentPlayer = nextPlayer();
 		checkPosition(xPosition, 'X');
 		checkPosition(yPosition, 'Y');
 		setBox(xPosition, yPosition);
@@ -27,6 +30,9 @@ public class TicTacToe {
 	}
 	
 	public char nextPlayer() {
+		if(currentPlayer == 'X') {
+			return 'O';
+		}
 		return 'X';
 	}
 }
