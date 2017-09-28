@@ -62,5 +62,9 @@ public class TicTacToeSpec {
 		assertEquals('X', ticTacToe.nextPlayer());
 	}
 	
-	
+	@Test
+	public void shouldShowNoWinnerWhenNoWinningConditionFulfilled() {
+		String result = ticTacToe.play(1, 1);
+		assertEquals("No winner", result);
+	}
 }
