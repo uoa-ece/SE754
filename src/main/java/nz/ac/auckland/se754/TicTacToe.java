@@ -6,6 +6,8 @@ public class TicTacToe {
 		if(yPosition < 1 || yPosition > 3) {
 			throw new RuntimeException("Y position is outside board!");
 		}
-		throw new RuntimeException("X position is outside board!");
+		if(xPosition < 1 || xPosition > 3) {
+			throw new RuntimeException("X position is outside board!");
+		}
 	}
 }
