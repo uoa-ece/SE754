@@ -69,7 +69,7 @@ public class TicTacToeSpec {
 	}
 	
 	@Test
-	public void shouldShowXIsWinnerWhenHisPiecesOccupiedAWholeHorizontalLine() {
+	public void shouldShowWinnerWhenHisPiecesOccupiedAWholeHorizontalLine() {
 		ticTacToe.play(1, 1); // X
 		ticTacToe.play(2, 1); // O
 		ticTacToe.play(1, 2); // X
