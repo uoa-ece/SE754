@@ -33,6 +33,10 @@ public class TicTacToe {
 			return currentPlayer+" is the winner";
 		}
 		
+		if(isDraw()) {
+			return "The result is draw";
+		}
+		
 		return "No winner";
 	}
 	
@@ -60,6 +64,17 @@ public class TicTacToe {
 			}
 		}
 		return false;
+	}
+	
+	private boolean isDraw() {
+		for(int i=0; i<SIZE; i++) {
+			for(int j=0; j<SIZE; j++) {
+				if(board[i][j] == SYMBOL_EMPTY) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 	
 	public char nextPlayer() {
