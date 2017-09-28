@@ -41,5 +41,10 @@ public class TicTacToeSpec {
 		expected.expectMessage("Space is occupied!");
 		ticTacToe.play(2, 1);
 	}
+	
+	@Test
+	public void shouldGiveNextPlayerToXWhenFirstTurn() {
+		assertEquals('X', ticTacToe.nextPlayer());
+	}
 
 }
