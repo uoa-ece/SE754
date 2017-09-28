@@ -32,5 +32,14 @@ public class TicTacToeSpec {
 		expected.expectMessage("Y position is outside board!");
 		ticTacToe.play(2, 5);
 	}
+	
+	@Test
+	public void shouldThrowRuntimeExceptionWhenAPiecePlacedOnAnOccupiedSpace() {
+		ticTacToe.play(2, 1);
+		
+		expected.expect(RuntimeException.class);
+		expected.expectMessage("Space is occupied!");
+		ticTacToe.play(2, 1);
+	}
 
 }
