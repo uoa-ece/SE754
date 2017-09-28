@@ -2,6 +2,9 @@ package nz.ac.auckland.se754;
 
 public class TicTacToe {
 
+	private final int SIZE = 3;
+	private final int LOW_BOUNDARY = 1;
+	
 	private char[][] board = {
 			{'\0', '\0', '\0'}, 
 			{'\0', '\0', '\0'}, 
@@ -24,7 +27,7 @@ public class TicTacToe {
 	}
 	
 	private void checkPosition(int position, char axis) {
-		if(position < 1 || position > 3) {
+		if(position < LOW_BOUNDARY || position > SIZE) {
 			throw new RuntimeException(axis+" position is outside board!");
 		}
 	}
@@ -37,7 +40,7 @@ public class TicTacToe {
 	}
 	
 	private boolean isWinner() {
-		for(int i=0; i<3; i++) {
+		for(int i=0; i<SIZE; i++) {
 			if(board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer  // Row
 					|| board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer // Column
 					|| board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer // Diagonal
