@@ -16,20 +16,7 @@ public class TicTacToe {
 		checkPosition(yPosition, 'Y');
 		setBox(xPosition, yPosition);
 		
-		for(int i=0; i<3; i++) {
-			if(board[i][0] == 'X' && board[i][1] == 'X' && board[i][2] == 'X') {
-				return "X is the winner";
-			}
-		}
-		
-		for(int i=0; i<3; i++) {
-			if(board[0][i] == 'X' && board[1][i] == 'X' && board[2][i] == 'X') {
-				return "X is the winner";
-			}
-		}
-		
-		if(board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X'
-				|| board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
+		if(isXWinner()) {
 			return "X is the winner";
 		}
 		
@@ -47,6 +34,15 @@ public class TicTacToe {
 			throw new RuntimeException("Space is occupied!");
 		}
 		board[xPosition-1][yPosition-1] = 'X';
+	}
+	
+	private boolean isXWinner() {
+		for(int i=0; i<3; i++) {
+			if(board[i][0] == 'X' && board[i][1] == 'X' && board[i][2] == 'X') {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public char nextPlayer() {
