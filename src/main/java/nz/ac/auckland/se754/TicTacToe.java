@@ -25,4 +25,8 @@ public class TicTacToe {
 		}
 		board[xPosition-1][yPosition-1] = 'X';
 	}
+	
+	public char nextPlayer() {
+		return '\0';
+	}
 }
