@@ -9,5 +9,6 @@ public class TicTacToe {
 		if(xPosition < 1 || xPosition > 3) {
 			throw new RuntimeException("X position is outside board!");
 		}
+		throw new RuntimeException("Space is occupied!");
 	}
 }
