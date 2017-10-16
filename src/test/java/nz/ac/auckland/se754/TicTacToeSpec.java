@@ -112,6 +112,7 @@ public class TicTacToeSpec {
 		assertEquals("The result is draw", result);
 	}
 	
+	@Ignore
 	@Test
 	public void shouldFail() {
 		fail("failed");
