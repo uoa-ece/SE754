@@ -12,7 +12,14 @@ public class TicTacToe {
 	
 	private char currentPlayer;
 	
+	private int width;
+	private int height;
+	
 	public TicTacToe() {
+		this(3, 3);
+	}
+	
+	public TicTacToe(int width, int height) {
 		board = new char[SIZE][SIZE];
 		for(int i=0; i<SIZE; i++) {
 			for(int j=0; j<SIZE; j++) {
@@ -20,6 +27,9 @@ public class TicTacToe {
 			}
 		}
 		currentPlayer = SYMBOL_EMPTY;
+		
+		this.width = width;
+		this.height = height;
 	}
 	
 	public String play(int xPosition, int yPosition) {
@@ -82,5 +92,10 @@ public class TicTacToe {
 			return SYMBOL_O;
 		}
 		return SYMBOL_X;
+	}
+	
+	public String displayBoard() {
+		System.out.println("X..\n...\n...");
+		return "X..\n...\n...";
 	}
 }

@@ -111,4 +111,9 @@ public class TicTacToeSpec {
 		String result = ticTacToe.play(3, 2); // X
 		assertEquals("The result is draw", result);
 	}
+	
+	@Test
+	public void shouldFail() {
+		fail("failed");
+	}
 }
