@@ -5,8 +5,22 @@ import static org.junit.Assert.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class DollarDivisionTest {
+public class DollarOperationTest {
 
+	@Test
+	public void testDollarMultiplication() {
+		
+		// Given
+		Dollar five = new Dollar(5);
+		
+		// When
+		five.multipliedBy(2);
+		
+		// Then
+		assertEquals(10, five.amount);
+		
+	}
+	
 	@Test
 	public void testDollarDivision() {
 		// Given
@@ -34,6 +48,19 @@ public class DollarDivisionTest {
 		while(true) {
 			
 		}
+	}
+	
+	@Test
+	public void testEqualOperation() {
+		// Given
+		Dollar ten = new Dollar(10);
+		Dollar anotherTen = new Dollar(10);
+				
+		// When
+		boolean result = ten.equals(anotherTen);
+				
+		// Then
+		assertTrue(result);
 	}
 
 }
