@@ -23,6 +23,7 @@ import weka.core.ProtectedProperties;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.StringToWordVector;
 
+@Ignore
 public class DBSCANDemoTest {
 	
 	DBSCANDemo dbscanDemo;
