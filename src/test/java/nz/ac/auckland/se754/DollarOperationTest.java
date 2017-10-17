@@ -50,6 +50,7 @@ public class DollarOperationTest {
 		}
 	}
 	
+	@Ignore
 	@Test
 	public void testEqualOperation() {
 		// Given
